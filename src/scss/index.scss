@@ -1,11 +1,4 @@
-@import
-    './abstracts/breakpoints',
-    './abstracts/functions',
-    './abstracts/mixins',
-    './abstracts/variables';
-
-@import
-    './base/reset',
-    './base/typography';
-
-
+@import './abstracts/variables';
+@import './abstracts/breakpoints';
+@import './abstracts/functions';
+@import './abstracts/mixins';
