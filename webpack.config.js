@@ -13,9 +13,9 @@ module.exports = {
     },
 
     devServer: {
+        hot: 'only',
         static: {
             directory: path.resolve(__dirname, 'dist'),
-            hot: true,
         }
     },
 
