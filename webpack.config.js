@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        assetModuleFilename: "assets/[name][ext]",
+        assetModuleFilename: "assets/images/[name][ext]",
         clean: true,
     },
 
@@ -22,7 +22,7 @@ module.exports = {
         }
     },
     plugins: [new HtmlWebpackPlugin({
-        template: "./src/index.html",
+        template: "./src/template.html",
     })],
 
     module: {
@@ -41,6 +41,7 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ]
             },
@@ -51,7 +52,7 @@ module.exports = {
                 
                 type: 'asset/resource',
                 generator: {
-                    filename: "assets/[name][ext]",
+                    filename: "assets/images/[name][ext]",
                 },
         
               },
