@@ -1,14 +1,14 @@
-
 @font-face {
-  font-family: 'Raleway';
-  src: url(/src/assets/fonts/Raleway-SemiBold.ttf);
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'Raleway';
+    src: url(/src/assets/fonts/Raleway-SemiBold.ttf);
+    font-weight: 500;
+    font-style: normal;
 }
 body {
-  font-family: 'Raleway';
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  background-color: green;
+    font-family: 'Raleway';
+    font-weight: bold;
+    display: flex;
+
+    flex-direction: column;
+    background-color: $bg;
 }
