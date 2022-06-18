@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const json5 = require('json5');
 
 module.exports = {
     mode: "development",
@@ -70,7 +71,25 @@ module.exports = {
                     filename: "assets/images/[name][ext]",
                 },
         
-              },
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename:'assets/fonts/[name][ext]',
+                }
+
+            },
+            {
+                test: /\.json5$/i,
+                type: 'json',
+                parser: {
+                    parse: json5.parse,
+                },
+                generator: {
+                    filename: 'assets/data/[name][ext]',
+                },
+            },
         ],
        
     }
