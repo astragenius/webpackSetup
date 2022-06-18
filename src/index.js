@@ -1,2 +1,4 @@
 import './scss/index.scss'
-import odin from './assets/img/the-odin-img.png'
+import hallo from './js/test.js'
+
+hallo()

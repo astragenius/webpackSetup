@@ -10,5 +10,12 @@ body {
     display: flex;
 
     flex-direction: column;
-    background-color: $bg;
+    background-color: darken($bg, 70);
+    font-size: rem(30);
+
+    @include breakpoint-up('small') {
+
+      font-size: rem(12);
+    }
+    
 }

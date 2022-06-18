@@ -1,23 +1,20 @@
-const path = require('path');
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const json5 = require('json5');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const json5 = require('json5')
 
 module.exports = {
-    mode: "development",
+    mode: 'development',
     devtool: 'source-map',
-    
+
     entry: {
         index: path.resolve(__dirname, 'src/index.js'),
-       
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        assetModuleFilename: "assets/images/[name][ext]",
+        assetModuleFilename: 'assets/images/[name][ext]',
         clean: true,
-        
-        
     },
 
     devServer: {
@@ -27,18 +24,15 @@ module.exports = {
         },
         open: true,
         compress: true,
-        port: 3000,
         historyApiFallback: true,
-        
-
-        
     },
 
-    plugins: [new HtmlWebpackPlugin({
-        titel: "My Webpack setup",
-        template: "./src/template.html",
-    }),
-        new MiniCssExtractPlugin()
+    plugins: [
+        new HtmlWebpackPlugin({
+            titel: 'My Webpack setup',
+            template: './src/template.html',
+        }),
+        new MiniCssExtractPlugin(),
     ],
 
     module: {
@@ -47,8 +41,8 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
-                }
+                    loader: 'babel-loader',
+                },
             },
         ],
         rules: [
@@ -58,27 +52,24 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
-                    'sass-loader'
-                ]
+                    'sass-loader',
+                ],
             },
 
             {
-
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                
+
                 type: 'asset/resource',
                 generator: {
-                    filename: "assets/images/[name][ext]",
+                    filename: 'assets/images/[name][ext]',
                 },
-        
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename:'assets/fonts/[name][ext]',
-                }
-
+                    filename: 'assets/fonts/[name][ext]',
+                },
             },
             {
                 test: /\.json5$/i,
@@ -91,8 +82,5 @@ module.exports = {
                 },
             },
         ],
-       
-    }
-
-   
-};
+    },
+}
