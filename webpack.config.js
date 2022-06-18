@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: "development",
@@ -7,23 +8,37 @@ module.exports = {
     
     entry: {
         index: path.resolve(__dirname, 'src/index.js'),
+       
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
         assetModuleFilename: "assets/images/[name][ext]",
         clean: true,
+        
+        
     },
 
     devServer: {
-        hot: 'only',
+        hot: true,
         static: {
             directory: path.resolve(__dirname, 'dist'),
-        }
+        },
+        open: true,
+        compress: true,
+        port: 3000,
+        historyApiFallback: true,
+        
+
+        
     },
+
     plugins: [new HtmlWebpackPlugin({
+        titel: "My Webpack setup",
         template: "./src/template.html",
-    })],
+    }),
+        new MiniCssExtractPlugin()
+    ],
 
     module: {
         rules: [
@@ -39,7 +54,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader'
