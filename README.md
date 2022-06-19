@@ -1,6 +1,6 @@
 # Webpack starter setup
 
-##### My Frontend environment for building JavaScipt Web-Applications
+ My Frontend environment for building JavaScipt Web-Applications
 #
 ##### Includes the following features:
 
@@ -15,8 +15,8 @@
 
 #
 
-### How to Start 
-
+## How to Start 
+#
 ```
 npm init
 ```
@@ -37,4 +37,37 @@ npm run build
 #### For deleting the "dist" folder
 ```
 npm run clean
+```
+
+
+
+## My SCSS Folder Structure
+
+It's based on the 7 - 1 Pattern
+[7 - 1 Pattern](https://sass-guidelin.es/#architecture)
+
+```
+scss (Main folder)
+|      index.scss
+|
+|-------Components Folder(empty by default)
+          |-buttons.scss
+          |-form.scss
+|
+|-------base
+         |-resett.scss
+         |-typography.scss
+|
+|------abstracts
+        |-breakpoints.scss
+        |-functions.scss
+        |-mixins.scss
+        |-variables.scss
+|
+|-------layout
+         |-footer.scss
+         |-grid.scss
+         |-header.scss
+         |-navitagtion.scss
+        
 ```
