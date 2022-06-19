@@ -43,8 +43,8 @@ npm run clean
 
 ## My SCSS Folder Structure
 
-It's based on the 7 - 1 Pattern
-[7 - 1 Pattern](https://sass-guidelin.es/#architecture)
+
+[It's based on the 7 - 1 Pattern](https://sass-guidelin.es/#architecture)
 
 ```
 scss (Main folder)
