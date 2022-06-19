@@ -54,7 +54,7 @@ scss (Main folder)
           |-buttons.scss
           |-form.scss
 |
-|-------base
+|-------basegit 
          |-resett.scss
          |-typography.scss
 |
