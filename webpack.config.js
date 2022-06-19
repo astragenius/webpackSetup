@@ -19,6 +19,7 @@ module.exports = {
 
     devServer: {
         hot: true,
+        liveReload: true,
         static: {
             directory: path.resolve(__dirname, 'dist'),
         },
