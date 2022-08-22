@@ -12,6 +12,8 @@
 - Source Maps
 - Prettier Formatter
 - Preconfigured SCSS - Folder
+- PurgeCSS Plugin
+- SCSS Utility Class Functions
 
 #
 
