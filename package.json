@@ -9,7 +9,8 @@
     "watch": "webpack --watch",
     "build": "webpack",
     "clean": "rm -rf dist",
-    "test": "jest"
+    "test": "jest",
+    "testWatch": "jest --watch"
   },
   "repository": {
     "type": "git",
